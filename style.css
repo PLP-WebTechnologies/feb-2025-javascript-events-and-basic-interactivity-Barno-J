@@ -1,0 +1,411 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex; /* Using Flexbox for the main layout */
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #3498db;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* Header Styles */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 5px solid #e74c3c;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Styles */
+section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+#Section-One {
+    grid-column: 1 / span 12;
+    border-left: 4px solid #e74c3c;
+}
+
+#Section-Two {
+    grid-column: 1 / span 12;
+    border-left: 4px solid #3498db;
+}
+
+h2 {
+    color: #e74c3c;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #2980b9;
+    margin-top: 25px;
+}
+
+ol {
+    background-color: #ecf0f1;
+    padding: 15px 15px 15px 40px;
+    border-radius: 5px;
+}
+
+ol li {
+    padding: 5px 0;
+}
+
+.table-container {
+    overflow-x: auto; /* For horizontal scrolling on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Form Styles */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #2980b9;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    align-items: center;
+}
+
+label {
+    justify-self: end;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.radio-group {
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    margin-top: 15px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.multimedia-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.media-item {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #3498db;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 15px 0;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+/* Audio and Video Styles */
+audio, video {
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* Tablet Devices */
+@media screen and (max-width: 900px) {
+    /* Grid adjustments */
+    .main-content {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 20px;
+    }
+    
+    #Section-One, #Section-Two {
+        grid-column: 1 / span 8;
+    }
+    
+    /* Form adjustments */
+    form {
+        grid-template-columns: 1fr;
+    }
+    
+    label {
+        justify-self: start;
+    }
+    
+    .radio-group {
+        grid-column: 1;
+    }
+    
+    button {
+        grid-column: 1;
+    }
+
+    /* Table adjustments */
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Contact form container */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Group label + input/textarea vertically */
+  #form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Inputs and textarea: make them user-friendly */
+  #contact-form input,
+  #contact-form textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  #contact-form input:focus,
+  #contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button: inherit your theme */
+  #contact-form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #007bff; /* adjust to your theme */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s;
+  }
+  
+  #contact-form button:hover {
+    background-color: #0056b3;
+  }
+   
+
+   /* Mobile Devices */
+@media screen and (max-width: 600px) {
+    /* Navigation bar adjustments */
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 70px;
+        background-color: #2c3e50;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        transform: translateY(-150%);
+        transition: transform 0.5s ease-in;
+        z-index: 98;
+        padding: 20px 0;
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+        box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .burger {
+        display: flex;
+    }
+    
+    /* Header adjustments */
+    header {
+        padding: 40px 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    /* Section adjustments */
+    section {
+        padding: 15px;
+    }
+    
+    .main-content {
+        display: block;
+        padding: 0 15px;
+    }
+    
+    /* Table visibility on mobile */
+    th, td {
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    h3 {
+        font-size: 1.1em;
+    }
+}

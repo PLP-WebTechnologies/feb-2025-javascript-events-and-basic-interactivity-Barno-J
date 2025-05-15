@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+ <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>HTML Assignment - PLP</title>
+         <link rel="stylesheet" href="style.css">
+     </head>
+     <body>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">Week 6 Assignment</div>
+                <ul class="nav-links">
+                    <li><a href="#Section-One">Lists & Forms</a></li>
+                    <li><a href="#Section-Two">Multimedia</a></li>
+                </ul>
+                <div class="burger" onclick="toggleNav()">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </nav>
+         <header>
+             <h1>Lists, Tables, Forms and Multimedia Elements</h1>
+             <button id="ChangeTextBtn">Change Text</button>
+         </header>
+ 
+         <div class="main-content">
+            <section id="Section-One">
+                <h2>Lists, Tables and Forms</h2>
+    
+                <h3>Ingredients</h3>
+                <ol type="i">
+                    <li>Large Onions</li>
+                    <li>Tomatoes</li>
+                    <li>Bell Peppers</li>
+                    <li>Garlic</li>
+                    <li>Ginger</li>
+                </ol>
+    
+                <h3>Contact Table</h3>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Mobile</th>
+                            <th>Email</th>
+                        </tr>
+        
+                        <tr>
+                            <td><input type="text" name="name1" placeholder="name??"></td>
+                            <td><input type="text" name="address1" placeholder="place??"></td>
+                            <td><input type="tel" name="mobile1" placeholder="contact??"></td>
+                            <td><input type="email" name="email1" placeholder="email??"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name2" placeholder="Mercy"></td>
+                            <td><input type="text" name="address2" placeholder="United States"></td>
+                            <td><input type="tel" name="mobile2" placeholder="0756452571"></td>
+                            <td><input type="email" name="email2" placeholder="mercymk@gmail.com"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name3" placeholder="Evans"></td>
+                            <td><input type="text" name="address3" placeholder="Meru"></td>
+                            <td><input type="tel" name="mobile3" placeholder="0764137786"></td>
+                            <td><input type="email" name="email3" placeholder="evanst@gmail.com"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name4" placeholder="Victory"></td>
+                            <td><input type="text" name="address4" placeholder="Nakuru"></td>
+                            <td><input type="tel" name="mobile4" placeholder="0782765123"></td>
+                            <td><input type="email" name="email4" placeholder="vmalawi@gmail.com"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name5" placeholder="Samantha"></td>
+                            <td><input type="text" name="address5" placeholder="Nairobi"></td>
+                            <td><input type="tel" name="mobile5" placeholder="0745152613"></td>
+                            <td><input type="email" name="email5" placeholder="samantha22@gmail.com"></td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <h3>Registration Form</h3>
+                <form>
+                    <label for="name">Full Name:</label>
+                    <input type="text" name="name" placeholder="Enter your full name" required><br><br>
+    
+                    <label for="email">Email Address:</label>
+                    <input type="email" name="email" placeholder="Enter your email" required><br><br>
+    
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" placeholder="Enter password" required minlength="6"><br><br>
+    
+                    <label for="date of birth">Date of Birth:</label>
+                    <input type="date" name="dob" required><br><br>
+    
+                    <label for="country">Country:</label>
+                    <select name="country" required>
+                    <option value="">-- Select --</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    </select><br><br>
+    
+                    <label for="gender">Gender:</label>
+                    <div class="radio=group">
+                        <span><input type="radio" name="gender" value="Male" required> Male</span>
+                        <span><input type="radio" name="gender" value="Female" required> Female</span>
+                    </div>
+    
+                    <button type="submit">Register</button>
+                </form>
+            </section>
+    
+            <section id="Section-Two">
+                <h2>Multimedia Elements</h2>
+
+                <div class="multimedia-container">
+                    <div class="media-item">
+                        <h3>External Image</h3>
+                        <img id="gallery-img" src="https://tinyurl.com/mvmn97ye" alt="Cute Baby" width="250" height="200">
+                        <button id="nextImage">Next Image</button>
+                    </div>
+
+                    <div class="media-item">
+                        <h3>Audio</h3>
+                        <audio controls>
+                            <source src="pure-love-304010.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+
+                    <div class="media-item">
+                        <h3>Video</h3>
+                        <video width="500" height="250" controls loop muted>
+                            <source src="https://videos.pexels.com/video-files/855029/855029-hd_1920_1080_30fps.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <form id="contact-form" onsubmit="return validateForm()" class="contact-form">
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" />
+                    </div>
+                  
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" />
+                    </div>
+                  
+                    <div class="form-group">
+                      <label for="message">Message:</label>
+                      <textarea id="message" name="message"></textarea>
+                    </div>
+                  
+                    <button type="submit">Send</button>
+                  </form>
+                  
+                  <p id="success-message" style="display: none; color: green; font-weight: bold; text-align: center; margin-top: 15px;">
+                    Your message has been sent successfully!
+                  </p>
+                  
+              </section>
+              
+         </div>
+         <script>
+            function toggleNav() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('active');
+                
+                // Animation for burger menu
+                const burger = document.querySelector('.burger');
+                burger.classList.toggle('toggle');
+            }
+        </script>
+        <script src="script.js"></script>
+     </body>
+ </html>
